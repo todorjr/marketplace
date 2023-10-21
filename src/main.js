@@ -9,10 +9,11 @@ Vue.config.productionTip = false
 
 Vue.use(VueGoogleMaps, {
   load: {
-    key: 'AIzaSyBBG9Ala_mSG-uiKlLC8gd_YNn5MyxRLFI',
-    libraries: 'places', // This is required if you use the Autocomplete plugin
+    key: process.env.VUE_APP_GOOGLE_MAPS_API_KEY,
+    libraries: 'places',
   },
 });
+
 
 new Vue({
   router,

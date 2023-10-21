@@ -23,6 +23,7 @@ export default {
   data() {
     return {
       center: { lat: 48.8566, lng: 2.3522 },
+      markers: [],
       mapStyles: [
         { elementType: 'geometry', stylers: [{color: '#242f3e'}]},
         { elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
