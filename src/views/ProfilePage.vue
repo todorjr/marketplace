@@ -5,29 +5,29 @@
         :name="profile.name" 
         :bio="profile.bio"
         />
-      <CustomerProduct
+      <!-- <CustomerProduct
         v-for="product in products" 
         :key="product.id"
         :productImage="product.image" 
         :productName="product.name" 
         :productPrice="product.price"
-        />
+        /> -->
     </div>
   </template>
   
   <script>
   import AccountCustomer from '../components/AccountCustomer.vue'
-  import CustomerProduct from '../components/CustomerProduct.vue'
+//   import CustomerProduct from '../components/CustomerProduct.vue'
   
   export default {
     components: {
       AccountCustomer,
-      CustomerProduct
+    //   CustomerProduct
     },
     data() {
       return {
         profile: {
-          image: '', 
+          image: require('@/assets/_MG_9736.jpg'),
           name: '', 
           bio: ''
         },

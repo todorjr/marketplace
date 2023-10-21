@@ -1,6 +1,5 @@
 <template>
     <div>
-      <ProfilePage />
       <SearchBar @search="handleSearch" />
       <MapComponent />
     </div>
@@ -9,12 +8,10 @@
   <script>
   import SearchBar from '../components/SearchBar.vue';
   import MapComponent from '../components/MapComponent.vue';
-  import ProfilePage from '../views/ProfilePage.vue'
 
   
   export default {
     components: {
-      ProfilePage,
       SearchBar,
       MapComponent
     },

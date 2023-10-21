@@ -1,6 +1,6 @@
 <template>
     <div>
-      <img :src="profileImage" alt="Profile Picture" />
+      <img :src="profileImage" alt="Profile Picture" class="profile-picture" />
       <h2>{{ name }}</h2>
       <p>{{ bio }}</p>
     </div>
@@ -16,4 +16,13 @@
     }
   }
   </script>
+
+  <style scoped>
+  img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  </style>
   

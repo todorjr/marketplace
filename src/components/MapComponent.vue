@@ -1,7 +1,7 @@
 <template>
   <div class="map-container">
     <GmapMap
-      :center="{lat: 48.8566, lng: 2.3522}"
+      :center="center"
       :zoom="7"
       :options="{styles: mapStyles}"
       style="width: 100%; height: 500px; margin-top: 20px; border-radius: 10px;"
@@ -22,9 +22,7 @@ export default {
   name: 'MapComponent',
   data() {
     return {
-      markers: [
-      { position: { lat: 48.8566, lng: 2.3522 } }
-      ],
+      center: { lat: 48.8566, lng: 2.3522 },
       mapStyles: [
         { elementType: 'geometry', stylers: [{color: '#242f3e'}]},
         { elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
@@ -106,7 +104,28 @@ export default {
         }
       ]
     };
-}
+  },
+  mounted() {
+    this.getUserLocation();
+  },
+  methods: {
+      getUserLocation() {
+          if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition((position) => {
+                  const lat = position.coords.latitude;
+                  const lng = position.coords.longitude;
+                  this.markers = [];
+                  this.markers.push({ position: { lat, lng } });
+                  this.center = { lat, lng };
+              }, (error) => {
+                  console.error("Error fetching location", error);
+              });
+          } else {
+              console.error("Geolocation is not supported by this browser.");
+          }
+      }
+  }
+
 
 }
 </script>
