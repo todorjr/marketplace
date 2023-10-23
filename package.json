@@ -2,10 +2,13 @@
   "name": "marketplace",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://todorjr.github.io/marketplace/",
+
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "core-js": "^3.8.3",
@@ -23,6 +26,7 @@
     "autoprefixer": "^10.4.16",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
+    "gh-pages": "^6.0.0",
     "postcss": "^8.4.31",
     "vue-template-compiler": "^2.6.14"
   },

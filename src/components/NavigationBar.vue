@@ -14,25 +14,21 @@
   <style scoped>
   nav {
     display: flex;
-    justify-content: space-around;
     padding: 10px 0;
-    background-color: #333;
+    gap: 15px;
   }
   
   nav a {
-    color: #fff;
     text-decoration: none;
+    color: #000;
     padding: 10px 15px;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    border: 1px solid rgb(0, 0, 0);
   }
-  
-  nav a:hover {
-    background-color: #555;
-  }
+
   
   .router-link-exact-active {
-    background-color: #555;
+    background-color: #f6f6f6;
   }
   </style>
   

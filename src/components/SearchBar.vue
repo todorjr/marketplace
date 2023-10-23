@@ -1,7 +1,7 @@
 <template>
   <div class="search-bar">
         <i class="fa fa-search search-bar-icon"></i>
-        <input type="text" placeholder="Search" />
+        <input type="text" placeholder="Search" v-model="query" @input="onInputChange"/>
     </div>
 </template>
 
